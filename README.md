@@ -27,6 +27,9 @@ Server runs on address 0.0.0.0 and port 5000.
 Using a software like [postman] (https://www.postman.com/), API calls can be made to these endpoints:
 
 Endpoint        Request Method Type
+
 /add            POST
+
 /spend          POST
+
 /balance        GET
