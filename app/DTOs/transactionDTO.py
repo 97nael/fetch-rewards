@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
+from typing import List, Dict
 
 
 class TransactionRequest(BaseModel):
@@ -13,8 +14,8 @@ class SpendingRequest(BaseModel):
 
 
 class SpendingResponse(BaseModel):
-    spendings: list
+    spendings: List = []
 
 
 class BalanceResponse(BaseModel):
-    balances: dict
+    balances: Dict[str, int] = {}
