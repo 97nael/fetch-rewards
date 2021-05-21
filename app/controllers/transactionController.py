@@ -1,3 +1,7 @@
+"""
+API endpoints for actions related to points and transaction requests
+"""
+
 from fastapi import APIRouter
 import services.transactionServices as tS
 from DTOs.transactionDTO import (

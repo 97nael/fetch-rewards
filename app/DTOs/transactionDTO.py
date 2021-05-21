@@ -1,3 +1,7 @@
+"""
+Request/response models for API controllers
+"""
+
 from pydantic import BaseModel
 from datetime import datetime
 from typing import List, Dict
