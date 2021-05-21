@@ -1,5 +1,6 @@
 from fastapi import APIRouter
-from models.transactionModel import (
+import services.transactionServices as tS
+from DTOs.transactionDTO import (
     TransactionRequest,
     SpendingRequest,
     SpendingResponse,
@@ -14,14 +15,14 @@ trans_router = APIRouter(
 
 @trans_router.post("/add", status_code=201)
 def add_transaction(tranaction: TransactionRequest):
-    pass
+    tS.add_transaction(tranaction)
 
 
 @trans_router.post("/spend", response_model=SpendingResponse)
 def spend_points(spendings: SpendingRequest):
-    pass
+    return tS.spend_points(spendings)
 
 
 @trans_router.get("/balance", response_model=BalanceResponse)
 def get_payer_balances():
-    pass
+    return tS.get_balances()
