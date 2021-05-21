@@ -13,6 +13,7 @@ pip install -r requirements.txt
 An environment can be created and activated with the correct Python version using conda.
 
 conda create --name fetch_rewards python=3.9.4
+
 conda activate fetch_rewards
 
 ## Run
