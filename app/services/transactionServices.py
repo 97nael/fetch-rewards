@@ -11,12 +11,27 @@ mem_storage = create_storage()
 
 
 def add_transaction(transaction: TransactionRequest):
+    """Adds data to global memory storage
+
+    Args:
+        transaction (TransactionRequest): request model for incoming transactions
+    """
+
     global mem_storage
 
     mem_storage.append(transaction)
 
 
 def spend_points(spendings: SpendingRequest):
+    """Spend requested pointsfrom balance
+
+    Args:
+        spendings (SpendingRequest): request model for amount of points to be spent
+
+    Returns:
+        res (SpendingResponse): response model for all spending transactions
+    """
+
     global mem_storage
     mem_storage = sort_storage(mem_storage)
 
@@ -73,6 +88,12 @@ def spend_points(spendings: SpendingRequest):
 
 
 def get_balances():
+    """Get point balance
+
+    Returns:
+        res (BalanceResponse): response model for remaining balances
+    """
+
     global mem_storage
 
     mem_storage = sort_storage(mem_storage)
