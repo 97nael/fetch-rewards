@@ -13,7 +13,6 @@ pip install -r requirements.txt
 An environment can be created and activated with the correct Python version using conda.
 
 conda create --name fetch_rewards python=3.9.4
-
 conda activate fetch_rewards
 
 ## Run
@@ -26,10 +25,10 @@ Server runs on address 0.0.0.0 and port 5000.
 
 Using a software like [postman] (https://www.postman.com/), API calls can be made to these endpoints:
 
-Endpoint        Request Method Type
+Endpoint - Request Method Type
 
-/add            POST
+/add - POST
 
-/spend          POST
+/spend - POST
 
-/balance        GET
+/balance - GET
